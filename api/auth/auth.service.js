@@ -36,7 +36,6 @@ function isAuthenticated() {
     );
 }
 function signToken(payload) {
-  console.log("secrets", getSecrets())
   const token = jwt.sign(payload, getSecrets(), { expiresIn: '2h' });
   return token;
 }
